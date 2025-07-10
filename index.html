@@ -99,20 +99,42 @@
 
  <audio id="musica" src="ego.mp3" autoplay loop muted></audio>
 
-<script>
-  const audio = document.getElementById("musica");
-  audio.muted = false; // Tira o mudo
-  audio.volume = 0.1;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Site com Música</title>
+</head>
+<body>
+  <h1>Bem-vindo ao meu site</h1>
 
+  <!-- Botão para tocar a música -->
+  <button id="playBtn">▶ Tocar Música</button>
 
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      audio.play().catch((e) => {
-        console.warn("Autoplay bloqueado, aguardando interação do usuário.");
-      });
-    }, 500);
-  });
-</script>
+  <!-- Áudio -->
+  <audio id="musica" src="ego.mp3" loop></audio>
+
+  <script>
+    const audio = document.getElementById("musica");
+    const playBtn = document.getElementById("playBtn");
+
+    audio.volume = 0.1; // Volume baixo
+
+    playBtn.addEventListener("click", () => {
+      audio.play()
+        .then(() => {
+          console.log("Música tocando");
+          playBtn.disabled = true; // Desativa o botão depois de clicar
+          playBtn.textContent = "🎵 Tocando...";
+        })
+        .catch(err => {
+          console.error("Erro ao tentar tocar o áudio:", err);
+        });
+    });
+  </script>
+</body>
+</html>
+
 
 
 </body>
