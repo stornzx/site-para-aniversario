@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Aniversário, Verônica!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1f1f1f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #ff4655;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      max-width: 600px;
+      font-size: 1em;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ff4655;
+      box-shadow: 0 0 15px rgba(255, 70, 85, 0.5);
+      margin-bottom: 30px;
+    }
+    .valorant-theme {
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      filter: brightness(0.25);
+    }
+    .button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #ff4655;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #e13e4e;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
+      p {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="valorant-theme"></div>
+  <img src="veve.jpg" alt="Verônica" class="profile-img">
+  <h1>Feliz Aniversário, Verônica!</h1>
+  <p>
+    Hoje é um dia especial, e eu não poderia deixar passar em branco.<br><br>
+
+    Desde aquela primeira partida de Valorant, quando a gente caiu no mesmo time (ou talvez em lados opostos 👀), alguma coisa me dizia que aquilo não ia ser só mais uma partida aleatória. Aos poucos, entre estratégias, risadas e jogadas (algumas boas, outras nem tanto 😂), fui conhecendo uma pessoa incrível do outro lado da tela: você.<br><br>
+
+    Verônica, sua presença é leve, divertida, cheia de energia boa. Até nas partidas mais tensas, seu jeito consegue transformar tudo em algo mais leve. Sua risada é melhor do que qualquer MVP, e sua amizade tem sido uma daquelas conquistas inesperadas que fazem a vida ser mais legal.<br><br>
+
+    Hoje, no seu dia, quero te desejar tudo de melhor. Que você continue sendo essa pessoa maravilhosa, autêntica e cheia de brilho. Que cada nova fase da sua vida venha com upgrades incríveis, conquistas épicas e momentos inesquecíveis. Que nunca falte alegria, saúde, amor e… é claro, muita bala na cabeça dos adversários! 💥🎯<br><br>
+
+    Obrigado por ter aparecido na minha vida, mesmo que tenha sido por um jogo. Porque às vezes, as melhores conexões acontecem nos lugares mais inesperados.<br><br>
+
+    Feliz aniversário, Verônica. Que esse seja só o começo de muitos capítulos memoráveis — dentro e fora do Valorant. 💖🎂
+  </p>
+
+ <audio id="musica" src="EGO.mp3" autoplay loop></audio>
+<script>
+  const audio = document.getElementById("musica");
+  audio.volume = 0.05; // Volume de 0.0 (mudo) até 1.0 (máximo)
+</script>
+
+</body>
+</html>
