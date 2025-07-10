@@ -97,11 +97,23 @@
     Feliz aniversário, Verônica. Que esse seja só o começo de muitos capítulos memoráveis — dentro e fora do Valorant. 💖🎂
   </p>
 
- <audio id="musica" src="EGO.mp3" autoplay loop></audio>
+ <audio id="musica" src="ego.mp3" autoplay loop muted></audio>
+
 <script>
   const audio = document.getElementById("musica");
-  audio.volume = 0.05; // Volume de 0.0 (mudo) até 1.0 (máximo)
+  audio.muted = false; // Tira o mudo
+  audio.volume = 0.1;
+
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      audio.play().catch((e) => {
+        console.warn("Autoplay bloqueado, aguardando interação do usuário.");
+      });
+    }, 500);
+  });
 </script>
+
 
 </body>
 </html>
